@@ -66,8 +66,21 @@ public class Main {
 	
 	public static void menuVenta(LinkedList<Venta> ventas, LinkedList<Cafe> cafes) {
 		int id = 0;
-		JOptionPane.showMessageDialog(null, "Que tipo de cafe desea cargar? \n Las opciones son las siguientes: \n" + cafes.get(0).getTipo_cafe() + "\n" + cafes.get(1).getTipo_cafe() + "\n" + cafes.get(2).getTipo_cafe() + "\n" + cafes.get(3).getTipo_cafe());
-				
+		String tipo;
+		tipo = JOptionPane.showInputDialog("Que tipo de cafe desea cargar? \n Las opciones son las siguientes: \n" + cafes.get(0).getTipo_cafe() + "\n" + cafes.get(1).getTipo_cafe() + "\n" + cafes.get(2).getTipo_cafe() + "\n" + cafes.get(3).getTipo_cafe());
+		switch (tipo.toLowerCase()) {
+		case "":
+			break;
+		case "":
+			break;
+		case "":
+			break;
+		case "":
+			break;
+		default:
+			break;
+		}
+		ventas.add(new Venta(id, null, id, null));		
 	}
 	
 	public static void menuConsulta(LinkedList<Venta> ventas) {
