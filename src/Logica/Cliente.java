@@ -2,9 +2,10 @@ package Logica;
 
 public class Cliente {
 	private String nombre;
-	private Tarjeta tarjeta;
+	private boolean tarjeta;
 	private int DNI;
-	public Cliente(String nombre, Tarjeta tarjeta, int dNI) {
+	
+	public Cliente(String nombre, boolean tarjeta, int dNI) {
 		super();
 		this.nombre = nombre;
 		this.tarjeta = tarjeta;
@@ -16,10 +17,10 @@ public class Cliente {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Tarjeta getTarjeta() {
+	public boolean isTarjeta() {
 		return tarjeta;
 	}
-	public void setTarjeta(Tarjeta tarjeta) {
+	public void setTarjeta(boolean tarjeta) {
 		this.tarjeta = tarjeta;
 	}
 	public int getDNI() {
@@ -30,7 +31,8 @@ public class Cliente {
 	}
 	@Override
 	public String toString() {
-		return "Socio [nombre=" + nombre + ", tarjeta=" + tarjeta + ", DNI=" + DNI + "]";
+		return "Cliente: " + nombre + " Tarjeta socio:" + tarjeta + " DNI: " + DNI;
 	}
+	
 	
 }

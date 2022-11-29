@@ -4,15 +4,26 @@ public class Venta {
 	private int ID;
 	private Cafe cafe;
 	private int cantidad;
-	private Tarjeta tarjeta;
+	private Cliente cliente;
 	private double precio_total;
-	public Venta(int iD, Cafe cafe, int cantidad, Tarjeta tarjeta) {
+	
+	public Venta(int iD, Cafe cafe, int cantidad, Cliente cliente, double precio_total) {
 		super();
 		ID = iD;
 		this.cafe = cafe;
 		this.cantidad = cantidad;
-		this.tarjeta = tarjeta;
+		this.cliente = cliente;
+		this.precio_total = precio_total;
 	}
+
+	public double getPrecio_total() {
+		return precio_total;
+	}
+
+	public void setPrecio_total(double precio_total) {
+		this.precio_total = precio_total;
+	}
+
 	public int getID() {
 		return ID;
 	}
@@ -31,15 +42,17 @@ public class Venta {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	public Tarjeta getTarjeta() {
-		return tarjeta;
+	public Cliente getCliente() {
+		return cliente;
 	}
-	public void setTarjeta(Tarjeta tarjeta) {
-		this.tarjeta = tarjeta;
+	public void setCliente(Cliente cliente) {
+		this.cliente= cliente;
 	}
+
 	@Override
 	public String toString() {
-		return "Venta [ID=" + ID + ", cafe=" + cafe + ", cantidad=" + cantidad + ", tarjeta=" + tarjeta + "]";
+		return cliente + "\nID de venta:" + ID + " " + cafe + " Cantidad: " + cantidad + " Precio total: " + precio_total + "\n";
 	}
+	
 	
 }

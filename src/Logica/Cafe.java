@@ -5,12 +5,22 @@ public class Cafe {
 	private String tipo_cafe;
 	private double precio;
 	private int cant_vendida;
-	public Cafe(int iD, String tipo_cafe, double precio) {
+	public Cafe(int iD, String tipo_cafe, double precio, int cant_vendida) {
 		super();
 		ID = iD;
 		this.tipo_cafe = tipo_cafe;
 		this.precio = precio;
+		this.cant_vendida = cant_vendida;
 	}
+	
+	public int getCant_vendida() {
+		return cant_vendida;
+	}
+
+	public void setCant_vendida(int cant_vendida) {
+		this.cant_vendida = cant_vendida;
+	}
+
 	public int getID() {
 		return ID;
 	}
@@ -29,9 +39,10 @@ public class Cafe {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+
 	@Override
 	public String toString() {
-		return "Cafe [ID=" + ID + ", tipo_cafe=" + tipo_cafe + ", precio=" + precio + "]";
+		return "Tipo de cafe: " + tipo_cafe + " Precio: $" + precio;
 	}
 	
 }
