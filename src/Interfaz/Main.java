@@ -141,7 +141,7 @@ public class Main {
 		case 1:
 			JOptionPane.showMessageDialog(null, "Las ventas durante el dia fueron las siguientes");
 			for (int i = 0; i < ventas.size(); i++) {
-				JOptionPane.showMessageDialog(null, ventas.get(i).getCliente() + " \nEl cliente compro: " + ventas.get(i).getCantidad() + " " + ventas.get(i).getCafe().getTipo_cafe() + "\n El valor individual es de: $as" + ventas.get(i).getCafe().getPrecio() + "\n El valor total de la venta fue de: $" + ventas.get(i).getPrecio_total() );
+				JOptionPane.showMessageDialog(null, ventas.get(i).getCliente() + " \nEl cliente compro: " + ventas.get(i).getCantidad() + " " + ventas.get(i).getCafe().getTipo_cafe() + "\n El valor individual es de: $" + ventas.get(i).getCafe().getPrecio() + "\n El valor total de la venta fue de: $" + ventas.get(i).getPrecio_total() );
 			}
 			break;
 		case 2:
